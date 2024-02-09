@@ -77,10 +77,6 @@ def getDeviceByName(device_name):
         return f"No device found with name: {decoded_device_name}", 404
     
 
-@app.route("/")
-@cross_origin()
-def serve():
-    return send_from_directory(app.static_folder, 'index.html') 
 
 if __name__ == "__main__":
     app.run(debug=False)
