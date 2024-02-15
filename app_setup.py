@@ -5,7 +5,7 @@ import os
 
 app = Flask(__name__, static_folder="../frontend/build")
 CORS(app)
-db_url = os.getenv("DATABASE_URL")
-app.config['SQLALCHEMY_DATABASE_URI'] = db_url
+DATABASE_URL = os.environ['DATABASE_URL']
+app.config['SQLALCHEMY_DATABASE_URI'] = DATABASE_URL
 
 db = SQLAlchemy(app)
